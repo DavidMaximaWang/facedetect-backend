@@ -1,0 +1,12 @@
+.git
+venv/*
+.history/*
+__pychache__/*
+project/*
+Dockerfile
+.gitignore
+README.md
+env.*
+
+*.csv
+/tmp/*
