@@ -53,14 +53,14 @@ def post_file():
         input_filename = os.path.join(UPLOAD_DIRECTORY, filename + file_type)
         with open(input_filename, "wb") as fp:
             file.save(input_filename)
-            a = predict_image_classification_tom_cluise(
-                project="915709539634",
-                endpoint_id="529700721797365760",
-                location="us-central1",
-                filename=input_filename
-            )
-            files[-1] = {**files[-1], **a}
-            faces.main(input_filename, os.path.join(UPLOAD_DIRECTORY, filename + "_1" + file_type), 4)
+            # a = predict_image_classification_tom_cluise(
+            #     project="915709539634",
+            #     endpoint_id="529700721797365760",
+            #     location="us-central1",
+            #     filename=input_filename
+            # )
+            # files[-1] = {**files[-1], **a}
+            # faces.main(input_filename, os.path.join(UPLOAD_DIRECTORY, filename + "_1" + file_type), 4)
 
     return json_response(data=files)
 
