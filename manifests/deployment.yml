@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: davidmaximawangfacedetectbackend 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: davidmaximawangfacedetectbackend
+  template:
+    metadata:
+      labels:
+        app: davidmaximawangfacedetectbackend 
+    spec:
+      containers:
+        - name: davidmaximawangfacedetectbackend 
+          image: ku8qaa.azurecr.io/davidmaximawangfacedetectbackend
+          ports:
+          - containerPort: 5000
